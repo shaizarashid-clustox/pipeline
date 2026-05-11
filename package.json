@@ -1,0 +1,21 @@
+{
+  "name": "pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node pipeline.js",
+    "run-once": "node -e \"require('./pipeline').runPipeline().then(r => { console.log(JSON.stringify(r, null, 2)); process.exit(r.success ? 0 : 1); })\"",
+    "dev": "LOG_LEVEL=debug node pipeline.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.16.0",
+    "dotenv": "^17.4.2",
+    "node-cron": "^4.2.1"
+  }
+}
